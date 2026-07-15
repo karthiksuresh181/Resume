@@ -153,6 +153,17 @@
       gap: 4px 0;
     }
 
+    .contact-info a {
+      color: #8FA8A0;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
     .contact-info .sep {
       margin: 0 10px;
       color: #3D5047;
@@ -190,16 +201,15 @@
     }
 
     /* ---------- skills ---------- */
-    /* Visual chip layout for human readers */
+    /* Visual chip layout for human readers — fixed 3-column grid for perfect alignment */
     .skills-visual {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px 32px;
     }
 
     .skill-category {
-      min-width: 180px;
-      flex: 0 0 auto;
+      /* stretches to fill the grid cell */
     }
 
     .skill-category-label {
@@ -365,24 +375,37 @@
 
     /* ---------- education ---------- */
     .edu-entry {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      page-break-inside: avoid;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      margin-bottom: 2px;
     }
 
     .edu-degree {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--ink);
-    }
-
-    .edu-school {
-      color: var(--ink-mid);
-      font-weight: 400;
     }
 
     .edu-year {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 12px;
+      font-weight: 500;
       color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .edu-school {
+      font-size: 13.5px;
+      color: var(--ink-mid);
+      font-weight: 400;
     }
 
     /* ---------- footer ---------- */
@@ -410,12 +433,14 @@
       }
 
       .job-header,
-      .project-header {
+      .project-header,
+      .edu-header {
         flex-direction: column;
       }
 
       .skills-visual {
-        gap: 14px 20px;
+        grid-template-columns: 1fr;
+        gap: 14px 0;
       }
     }
 
@@ -563,15 +588,15 @@
       <div class="role-title">Senior Software Engineer — Backend &amp; Platform Engineering</div>
       <div class="contact-info">
         <div class="row">
-          <span>karthik.suresh181@gmail.com</span>
+          <span><a href="mailto:karthik.suresh181@gmail.com">karthik.suresh181@gmail.com</a></span>
           <span class="sep">|</span>
-          <span>+91-7795717823</span>
+          <span><a href="tel:+917795717823">+91-7795717823</a></span>
           <span class="sep">|</span>
           <span>Bengaluru, India</span>
           <span class="sep">|</span>
-          <span>linkedin.com/in/karthiksuresh181</span>
+          <span><a href="https://linkedin.com/in/karthiksuresh181" target="_blank" rel="noopener noreferrer">linkedin.com/in/karthiksuresh181</a></span>
           <span class="sep">|</span>
-          <span>https://github.com/karthiksuresh181</span>
+          <span><a href="https://github.com/karthiksuresh181" target="_blank" rel="noopener noreferrer">github.com/karthiksuresh181</a></span>
         </div>
       </div>
     </header>
@@ -788,22 +813,34 @@
       <section id="education">
         <h2>Education</h2>
         <div class="edu-entry">
-          <div>
-            <span class="edu-degree fill-in">Bachelor of Engineering, Computer Science & Engineering</span>
-            <span class="edu-school"> — <span class="fill-in">The National Institute of Engineering</span></span>
+          <div class="edu-header">
+            <span class="edu-degree">Bachelor of Engineering, Computer Science &amp; Engineering</span>
+            <div class="job-dates"><span class="fill-in">2015</span> – <span class="fill-in">2019</span>
+            </div>
+            <div class="edu-school">The National Institute of Engineering</div>
           </div>
-          <div class="edu-year fill-in">2015 - 2019</div>
-        </div>
       </section>
 
     </main>
 
     <footer>
-      Last updated: <span class="fill-in">[Month YYYY]</span> · Single-page resume, printable to PDF
+      Last updated: <span id="current-date" class="fill-in">[Month YYYY]</span> · Single-page resume, printable to PDF
     </footer>
 
   </div>
 
 </body>
+<script>
+  const dateElement = document.getElementById('current-date');
+  const today = new Date();
+
+  // Formats the date to the user's local "Month YYYY" format
+  const formattedDate = today.toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric'
+  });
+
+  dateElement.textContent = formattedDate;
+</script>
 
 </html>
