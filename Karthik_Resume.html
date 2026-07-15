@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karthik [Last Name] — Senior Software Engineer Resume</title>
+  <meta name="description"
+    content="Senior Software Engineer with 7+ years of experience in Go, Python, C#/.NET, Kubernetes, and AI-assisted engineering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+     ATS-OPTIMIZED RESUME — DESIGN SYSTEM
+     Single-column, semantic HTML, standard section headings.
+     Premium visual aesthetic for screen; clean output for print/PDF.
+     ============================================================ */
+
+    :root {
+      --paper: #F4F6F8;
+      --panel: #FFFFFF;
+      --ink: #1A1F25;
+      --ink-mid: #3C4550;
+      --ink-soft: #5F6B78;
+      --line: #D1D7DD;
+      --line-soft: #E5E9ED;
+      --teal: #0E7C61;
+      --teal-bg: #E6F4EF;
+      --teal-border: #B8DDD0;
+      --navy: #131D27;
+      --navy-light: #1C2A38;
+      --accent-warm: #C17A2E;
+      --accent-warm-bg: #FDF5EB;
+      --radius: 4px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #0A5C48;
+      text-decoration: underline;
+    }
+
+    /* ---------- page shell ---------- */
+    .sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    }
+
+    /* ---------- print toolbar (screen only) ---------- */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: rgba(244, 246, 248, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toolbar button {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      background: var(--navy);
+      color: #fff;
+      border: 1px solid var(--navy);
+      border-radius: var(--radius);
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .toolbar button:hover {
+      background: var(--navy-light);
+    }
+
+    .toolbar .hint {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- header ---------- */
+    header {
+      background: var(--navy);
+      color: #E8EDE9;
+      padding: 36px 44px 32px;
+    }
+
+    h1 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .role-title {
+      font-size: 16.5px;
+      font-weight: 500;
+      color: #B0C4BB;
+      margin-bottom: 18px;
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: #8FA8A0;
+      line-height: 1.8;
+    }
+
+    .contact-info .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 0;
+    }
+
+    .contact-info .sep {
+      margin: 0 10px;
+      color: #3D5047;
+    }
+
+    /* ---------- main content ---------- */
+    main {
+      padding: 8px 44px 40px;
+    }
+
+    /* ---------- sections ---------- */
+    section {
+      padding-top: 28px;
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--teal);
+      margin-bottom: 16px;
+    }
+
+    /* ---------- summary ---------- */
+    .summary-text {
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.65;
+      max-width: 76ch;
+    }
+
+    /* ---------- skills ---------- */
+    /* Visual chip layout for human readers */
+    .skills-visual {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 32px;
+    }
+
+    .skill-category {
+      min-width: 180px;
+      flex: 0 0 auto;
+    }
+
+    .skill-category-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 8px;
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-chip {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: var(--radius);
+      background: var(--teal-bg);
+      color: #0D5E49;
+      border: 1px solid var(--teal-border);
+      white-space: nowrap;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .skill-chip:hover {
+      background: #D4EDE4;
+      transform: translateY(-1px);
+    }
+
+    /* ATS plaintext fallback — visually hidden but parser-readable */
+    .skills-ats {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ---------- experience ---------- */
+    .job {
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .job-company {
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .job-dates {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .job-location {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 8px;
+    }
+
+    ul.achievements {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    ul.achievements li {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    ul.achievements li::marker {
+      color: var(--teal);
+    }
+
+    .tech-used {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    /* placeholder style for items the user needs to fill in */
+    .fill-in {
+      background: var(--accent-warm-bg);
+      border: 1px dashed #E0BA7B;
+      color: #7A5218;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+
+    /* ---------- projects ---------- */
+    .project {
+      margin-bottom: 22px;
+      page-break-inside: avoid;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .project-context {
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .project-dates {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- education ---------- */
+    .edu-entry {
+      margin-bottom: 8px;
+    }
+
+    .edu-degree {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .edu-school {
+      color: var(--ink-mid);
+      font-weight: 400;
+    }
+
+    .edu-year {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      padding: 18px 44px 28px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--line-soft);
+      margin-top: 10px;
+    }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 640px) {
+
+      header,
+      main,
+      footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .job-header,
+      .project-header {
+        flex-direction: column;
+      }
+
+      .skills-visual {
+        gap: 14px 20px;
+      }
+    }
+
+    /* ---------- print / PDF ---------- */
+    @media print {
+      @page {
+        size: Letter;
+        margin: 0.45in 0.5in;
+      }
+
+      body {
+        background: #fff;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .sheet {
+        max-width: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      header {
+        background: #fff !important;
+        color: var(--ink) !important;
+        padding: 0 0 14px;
+        border-bottom: 2.5px solid var(--navy);
+      }
+
+      h1 {
+        color: var(--ink) !important;
+        font-size: 24px;
+      }
+
+      .role-title {
+        color: var(--ink-mid) !important;
+        margin-bottom: 10px;
+      }
+
+      .contact-info {
+        color: var(--ink-mid) !important;
+      }
+
+      .contact-info .sep {
+        color: var(--line) !important;
+      }
+
+      main {
+        padding: 0;
+      }
+
+      section {
+        padding-top: 16px;
+      }
+
+      h2 {
+        font-size: 11.5px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        border-bottom-width: 1.5px;
+      }
+
+      .summary-text {
+        font-size: 12px;
+      }
+
+      .skill-chip {
+        font-size: 10.5px;
+        padding: 2px 7px;
+      }
+
+      .job {
+        margin-bottom: 16px;
+      }
+
+      .job-title,
+      .project-name {
+        font-size: 13.5px;
+      }
+
+      .job-dates,
+      .project-dates {
+        font-size: 10.5px;
+      }
+
+      ul.achievements li {
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      footer {
+        padding: 12px 0 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Make ATS plaintext visible in print for parser coverage */
+      .skills-ats {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+        display: none;
+        /* Hidden in print since chips already show */
+      }
+
+      .skill-chip:hover {
+        background: var(--teal-bg);
+        transform: none;
+      }
+
+      .fill-in {
+        background: transparent;
+        border: 1px solid var(--ink-soft);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="toolbar">
+    <button onclick="window.print()">Download / Print as PDF</button>
+    <span class="hint">Opens your browser's print dialog — choose "Save as PDF"</span>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ============================================================
+         HEADER — Name, Title, Contact
+         ATS reads: h1 for name, plaintext for contact details
+         ============================================================ -->
+    <header>
+      <h1>Karthik Suresh</h1>
+      <div class="role-title">Senior Software Engineer — Backend &amp; Platform Engineering</div>
+      <div class="contact-info">
+        <div class="row">
+          <span>karthik.suresh181@gmail.com</span>
+          <span class="sep">|</span>
+          <span>+91-7795717823</span>
+          <span class="sep">|</span>
+          <span>Bengaluru, India</span>
+          <span class="sep">|</span>
+          <span>linkedin.com/in/karthiksuresh181</span>
+          <span class="sep">|</span>
+          <span>https://github.com/karthiksuresh181</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ============================================================
+           PROFESSIONAL SUMMARY
+           Standard ATS heading. Keywords woven into natural prose.
+           ============================================================ -->
+      <section id="professional-summary">
+        <h2>Professional Summary</h2>
+        <p class="summary-text">
+          Senior Software Engineer with 7+ years of progressive experience building production backend systems in Go,
+          Python, and C#/.NET. Proven track record in designing and deploying microservices on Kubernetes, with hands-on
+          ownership spanning CI/CD pipelines, containerized workloads, and platform infrastructure. Demonstrated ability
+          to identify and adopt emerging technologies early — including blockchain, computer vision, and conversational
+          AI — and deliver production-grade implementations. Currently focused on Go-based platform engineering with
+          AI-assisted development practices (GitHub Copilot, Claude) to accelerate delivery velocity without
+          compromising code quality. Seeking a platform or backend engineering role at a team solving complex
+          distributed systems challenges.
+        </p>
+      </section>
+
+      <!-- ============================================================
+           TECHNICAL SKILLS
+           Dual format: visual chips for humans + hidden plaintext for ATS parsers.
+           ============================================================ -->
+      <section id="technical-skills">
+        <h2>Technical Skills</h2>
+
+        <!-- ATS-readable plaintext (visually hidden, parser-accessible) -->
+        <div class="skills-ats" aria-hidden="false">
+          Languages: Go, Python, C#, TypeScript, JavaScript, MQL5.
+          Cloud and Infrastructure: Kubernetes, Docker, CI/CD, Linux, Helm.
+          Backend and APIs: Microservices, REST APIs, .NET, gRPC.
+          Frontend: Angular, HTML, CSS, Chart.js.
+          AI and Machine Learning: LangChain, GitHub Copilot, Claude, Chatbot Development, Computer Vision.
+          Tools and Practices: Git, Agile, Test-Driven Development, Performance Optimization, Technical Documentation.
+        </div>
+
+        <!-- Visual chip layout for human readers -->
+        <div class="skills-visual">
+          <div class="skill-category">
+            <div class="skill-category-label">Languages</div>
+            <div class="skill-chips">
+              <span class="skill-chip">Go</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">C#</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Cloud &amp; Infrastructure</div>
+            <div class="skill-chips">
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Kubernetes</span>
+              <span class="skill-chip">Linux</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Backend &amp; APIs</div>
+            <div class="skill-chips">
+              <span class="skill-chip">Microservices</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">.NET</span>
+              <span class="skill-chip">gRPC</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Frontend</div>
+            <div class="skill-chips">
+              <span class="skill-chip">Angular</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">AI &amp; ML</div>
+            <div class="skill-chips">
+              <span class="skill-chip">GitHub Copilot</span>
+              <span class="skill-chip">Claude</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Tools &amp; Practices</div>
+            <div class="skill-chips">
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">Agile</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROFESSIONAL EXPERIENCE
+           Reverse-chronological. Broken into distinct role phases.
+           Each entry: Title | Company | Dates on one line (ATS standard).
+           Bullets use CAR format with quantified metrics.
+           ============================================================ -->
+      <section id="professional-experience">
+        <h2>Professional Experience</h2>
+
+        <!-- Role 3: Current — Senior Engineer -->
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Senior Software Engineer</span>
+              <span class="job-company"> — Yokogawa</span>
+            </div>
+            <div class="job-dates"><span class="fill-in">2022</span> – Present</div>
+          </div>
+          <div class="job-location"><span class="fill-in">Bengaluru, India</span></div>
+          <ul class="achievements">
+            <li>Design and deploy Go-based backend microservices with full ownership of Kubernetes orchestration,
+              managing containerized workloads across <span class="fill-in">[X]</span> environments serving <span
+                class="fill-in">[Y]</span> requests/day.</li>
+            <li>Integrate AI-assisted development tools (GitHub Copilot, Claude) into daily engineering workflow,
+              reducing average feature delivery time by approximately <span class="fill-in">[X]</span>% while
+              maintaining code review pass rates above <span class="fill-in">[Y]</span>%.</li>
+            <li>Architected CI/CD pipeline improvements that reduced deployment cycle time from <span class="fill-in">[X
+                hours/minutes]</span> to <span class="fill-in">[Y hours/minutes]</span>, enabling faster release cadence
+              for the platform team.</li>
+            <li>Led migration of <span class="fill-in">[X]</span> services from legacy infrastructure to Kubernetes,
+              improving system reliability and reducing infrastructure costs by <span class="fill-in">[Y]</span>%.
+              <em>(Go, Kubernetes, Docker, CI/CD)</em>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Role 2: Mid-level — Full-Stack / Backend -->
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Software Engineer</span>
+              <span class="job-company"> — Yokogawa</span>
+            </div>
+            <div class="job-dates"><span class="fill-in">2019</span> – <span class="fill-in">2022</span>
+            </div>
+          </div>
+          <div class="job-location"><span class="fill-in">Bengaluru, India</span></div>
+          <ul class="achievements">
+            <li>Developed and maintained backend systems in C#/.NET, delivering RESTful APIs consumed by <span
+                class="fill-in">[X]</span> internal and external applications.</li>
+            <li>Built full-stack features end-to-end using Angular for frontend and .NET for backend, collaborating with
+              cross-functional teams including product management and QA.</li>
+            <li>Designed and implemented conversational AI and chatbot systems using Microsoft Bot Framework and
+              LangChain, enabling automated customer interactions that handled <span class="fill-in">[X]</span> queries
+              per month.</li>
+            <li>Developed image analytics and computer vision pipelines for industrial process monitoring, processing
+              <span class="fill-in">[X]</span> images per batch cycle with <span class="fill-in">[Y]</span>% accuracy.
+              <em>(C#, .NET, Angular, TypeScript, Python)</em>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Role 1: Entry-level / Intern -->
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Software Engineer Intern</span>
+              <span class="job-company"> — Yokogawa</span>
+            </div>
+            <div class="job-dates"><span class="fill-in">Jan, 2019</span> – <span class="fill-in">June, 2019</span>
+            </div>
+          </div>
+          <div class="job-location"><span class="fill-in">Benagluru, India</span></div>
+          <ul class="achievements">
+            <li>Researched and built a blockchain proof-of-concept application to evaluate distributed ledger technology
+              for industrial supply chain use cases, presenting findings to senior leadership.</li>
+            <li>Established an early pattern of self-directed technical research, independently evaluating blockchain
+              frameworks and recommending the best-fit solution for the organization's requirements. <em>(Blockchain,
+                Python)</em></li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- ============================================================
+           INDEPENDENT PROJECTS
+           Demonstrates initiative, deep systems thinking, and breadth.
+           ============================================================ -->
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <div class="project-header">
+            <div>
+              <span class="project-name">Multi-Platform Algorithmic Trading Systems</span>
+              <span class="project-context"> — Independent</span>
+            </div>
+            <div class="project-dates">Ongoing</div>
+          </div>
+          <ul class="achievements">
+            <li>Designed and built trading strategy infrastructure across QuantConnect, MQL5 (MetaTrader 5), and
+              NautilusTrader, including a multi-entry-model Expert Advisor with 24 selectable entry signals, ATR-based
+              risk management, and a chandelier trailing stop. <em>(Python, MQL5)</em></li>
+            <li>Implemented an automated SQN-style optimization metric via <code>OnTester()</code>, computing scores
+              from live per-trade R-multiples with a sample-size penalty to prevent overfitting on small datasets.</li>
+            <li>Resolved complex cross-platform data and execution issues including timezone handling (EST vs. broker
+              server time), forex/CFD data resolution gaps, and MQL5 stop-loss/take-profit normalization against broker
+              tick size and stop-level constraints.</li>
+            <li>Identified and corrected a position-sizing defect (<code>risk_amount / sl_distance</code>) after
+              backtests revealed oversized positions; built a CSV loader to normalize multiple broker export formats.
+              <em>(Python, Data Engineering)</em>
+            </li>
+            <li>Built an interactive R-multiple equity curve simulation dashboard with configurable risk-per-trade, win
+              rate, and reward parameters, using proportional compounding position sizing. <em>(JavaScript,
+                Chart.js)</em></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION
+           ============================================================ -->
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu-entry">
+          <div>
+            <span class="edu-degree fill-in">Bachelor of Engineering, Computer Science & Engineering</span>
+            <span class="edu-school"> — <span class="fill-in">The National Institute of Engineering</span></span>
+          </div>
+          <div class="edu-year fill-in">2015 - 2019</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Last updated: <span class="fill-in">[Month YYYY]</span> · Single-page resume, printable to PDF
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
